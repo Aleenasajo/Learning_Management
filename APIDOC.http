@@ -1,0 +1,38 @@
+#api call for creating user
+POST  http://127.0.0.1:8000/accounts/register/
+Content-Type: application/json
+
+{
+    "username":"aleena_sajo",
+    "email":"aleena1@gmail.com",
+    "password":"password@123",
+    "phone":"6282740246",
+    "role":"trainer"
+}
+
+#api call for retrieving trainer details
+###
+GET http://127.0.0.1:8000/trainer/2/
+Accept: application/json
+
+#api call for updating trainer details
+###
+PUT http://127.0.0.1:8000/trainer/2/
+Content-Type: application/json
+
+{
+    
+  "id": 2,
+  "qualification": "B.Tech",
+  "specialization": "Computer Science",
+  "experience": 2,
+  "bio":"Passionate in Teaching for last 2 years",
+  "designation": "python trainer",
+  "user": 2
+
+}
+#api call for deleting trainer
+###
+
+DELETE http://127.0.0.1:8000/trainer/2/
+Accept: application/json

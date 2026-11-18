@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from accounts.views import SignUpView
+from accounts.views import TrainerRetriveUpdateDeleteView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('accounts/register/',SignUpView.as_view()),
+    path('trainer/<int:pk>/',TrainerRetriveUpdateDeleteView.as_view()),
 ]
