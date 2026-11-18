@@ -1,3 +1,4 @@
+#==========================User=========================
 #api call for creating user
 POST  http://127.0.0.1:8000/accounts/register/
 Content-Type: application/json
@@ -9,7 +10,7 @@ Content-Type: application/json
     "phone":"6282740246",
     "role":"trainer"
 }
-
+#=================Trainer=======================
 #api call for retrieving trainer details
 ###
 GET http://127.0.0.1:8000/trainer/2/
@@ -33,6 +34,34 @@ Content-Type: application/json
 }
 #api call for deleting trainer
 ###
-
 DELETE http://127.0.0.1:8000/trainer/2/
+Accept: application/json
+
+#================student==================
+
+#api call for retriving student details
+###
+GET  http://127.0.0.1:8000/student/1/
+Accept: application/json
+
+#api call for updating student details
+###
+PUT http://127.0.0.1:8000/student/1/
+Content-Type: application/json
+
+{
+
+  "date_of_birth": "2003-12-12",
+  "gender": "female",
+  "education": "Btech",
+  "college": "Jyothi Engineering College",
+  "address": "Kokken House",
+  "guardian_name": "Sajo Paul",
+  "guardian_phone": "9746380025",
+  "user": 1
+}
+
+#api call for deleting student entry
+###
+DELETE http://127.0.0.1:8000/student/1/
 Accept: application/json

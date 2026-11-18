@@ -19,10 +19,12 @@ from django.urls import path
 
 from accounts.views import SignUpView
 from accounts.views import TrainerRetriveUpdateDeleteView
+from accounts.views import StudentRetriveUpdateDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('accounts/register/',SignUpView.as_view()),
     path('trainer/<int:pk>/',TrainerRetriveUpdateDeleteView.as_view()),
+    path('student/<int:pk>/',StudentRetriveUpdateDeleteView.as_view())
 ]

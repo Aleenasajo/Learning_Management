@@ -4,8 +4,8 @@ from rest_framework.generics import CreateAPIView
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
 
 from accounts.seriaizers import UserSerializer
-from accounts.seriaizers import TrainerProfileSerializer
-from accounts.models import TrainerProfile
+from accounts.seriaizers import TrainerProfileSerializer,StudentProfileSerializer
+from accounts.models import TrainerProfile,StudentProfile
 
 # Create your views here.
 
@@ -19,4 +19,8 @@ class TrainerRetriveUpdateDeleteView(RetrieveUpdateDestroyAPIView):
 
     serializer_class=TrainerProfileSerializer
 
-    
+class StudentRetriveUpdateDeleteView(RetrieveUpdateDestroyAPIView):
+
+    queryset=StudentProfile.objects.all()
+
+    serializer_class=StudentProfileSerializer  
