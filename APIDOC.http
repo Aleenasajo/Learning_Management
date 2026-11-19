@@ -26,15 +26,15 @@ Content-Type: application/json
   "id": 2,
   "qualification": "B.Tech",
   "specialization": "Computer Science",
-  "experience": 2,
-  "bio":"Passionate in Teaching for last 2 years",
+  "experience": 1,
+  "bio":"Passionate in Teaching for last 1 years",
   "designation": "python trainer",
   "user": 2
 
 }
 #api call for deleting trainer
 ###
-DELETE http://127.0.0.1:8000/trainer/2/
+DELETE http://127.0.0.1:8000/trainer/1/
 Accept: application/json
 
 #================student==================
@@ -63,5 +63,5 @@ Content-Type: application/json
 
 #api call for deleting student entry
 ###
-DELETE http://127.0.0.1:8000/student/1/
+DELETE http://127.0.0.1:8000/student/2/
 Accept: application/json
